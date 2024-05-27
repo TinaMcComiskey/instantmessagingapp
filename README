@@ -1,0 +1,5 @@
+npm install
+
+Frontend: run 'npm run dev'
+Backend: run 'nodemon'
+Socket: run 'nodemon'
