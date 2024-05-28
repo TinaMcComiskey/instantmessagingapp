@@ -2,4 +2,4 @@ npm install
 
 Frontend: run 'npm run dev'
 Backend: run 'npm run dev'
-Socket: run 'nodemon'
+Socket: run 'npm run dev'
