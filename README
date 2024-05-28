@@ -1,5 +1,5 @@
 npm install
 
 Frontend: run 'npm run dev'
-Backend: run 'nodemon'
+Backend: run 'npm run dev'
 Socket: run 'nodemon'
