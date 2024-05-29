@@ -1,5 +1,7 @@
-npm install
+'npm install' in the root directory, and possibly in each folders as well
 
 Frontend: run 'npm run dev'
 Backend: run 'npm run dev'
 Socket: run 'npm run dev'
+
+You can also just run 'npm run dev' in the root directory to run all 3 folders at once.
