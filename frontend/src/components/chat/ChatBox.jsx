@@ -26,7 +26,7 @@ const ChatBox = () => {
   }, [messages]);
 
   const handleKeyDown = (event) => {
-    if (event.key === 'Enter' && textMessage.trim() !== '') {
+    if (event.key === "Enter" && textMessage.trim() !== "") {
       sendTextMessage(textMessage, user, currentChat._id, setTextMessage);
     }
   };
