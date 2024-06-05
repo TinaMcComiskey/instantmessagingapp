@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Sign-In</title>
+    <style>
+        /* Style for the sign-in button */
+        #google-signin-button {
+            display: inline-block;
+            background: #4285F4;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-family: Arial, sans-serif;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Google Sign-In Example</h1>
+    <!-- Create a div to contain the sign-in button -->
+    <div id="google-signin-button" onclick="redirectToGoogleSignIn()">
+        Sign in with Google
+    </div>
+
+    <!-- Function to handle Google sign-in -->
+    <script>
+        function redirectToGoogleSignIn() {
+            // Redirect to the server route for Google OAuth authentication
+            window.location.href = "/auth/google";
+        }
+    </script>
+</body>
+</html>

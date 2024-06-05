@@ -1,7 +1,53 @@
-'npm install' in the root directory, and in each folder as well
+This project is a real-time chat application implemented using modern web technologies. The application allows users to register, authenticate, send and receive messages in real-time. The application is structured to run both frontend and backend service.
 
-Frontend: run 'npm run dev'
-Backend: run 'npm run dev'
-Socket: run 'npm run dev'
+The project is divided into 2 main parts: the frontend and the backend.
 
-You can also just run 'npm run dev' in the root directory to run all 3 folders at once.
+- Frontend: Deals with the Chat Application's interface and makes sure that it connects to the backend to perform different functions such as registering users, logging in, or sending messages.
+
+- Backend: Manage APIs and routes and database, and make sure that it can send information to the front end. Web Socket also lies in the backend to perform real-time communication between users.
+
+---Information about the Chat Application:---
+
+- When running the Chat Application, if you do not have an account, you can register for an account before logging in.
+- When registering, enter your name, email and password.
+  - Your email must be in the format: <name>@gmail.com
+  - Your password must follow at least: One uppercase, one number, and one symbol.
+- After logging in, the user can then create a chat with another users who already had an account.
+
+---
+
+- The Chat App currently only has:
+
+  - Register Users
+  - Log the Users in
+  - Create new chat with Users who already created an account.
+  - Real-time communication
+  - Load previous chat history from the database
+  - Notifications when the user has a new message from another user
+
+- The Chat App currently do not have due to difficulty in learning new information in a short amount of time:
+  - A search bar or a button to create chat with another Users
+  - Creating a Chat Group for multiple users
+  - Deleting a chat room
+
+* GitHub repo: https://github.com/TinaMcComiskey/instantmessagingapp
+* Branch: ChatApp
+  ** Ignore the 'main' branch **
+
+---To run the project, do the following:---
+
+'npm install' in the root directory, and in each folder (frontend, backend, and socket) do:
+
+Frontend: npm install
+Backend: npm install
+Socket: npm install
+
+To run the Chat Application, run the command in each of the folder separately:
+
+Frontend: npm run dev
+Backend: npm run dev
+Socket: npm run dev
+
+- If you did 'npm install' in the root directory and 'npm install' in all folders, you can also run 'npm run dev' in the root directory to run all 3 folders at once.
+
+- You can do Ctrl+C in the terminal if you want to stop the program.
