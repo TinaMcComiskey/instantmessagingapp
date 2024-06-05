@@ -1,12 +1,48 @@
-This project is a real-time chat application implemented using modern web technologies. The application allows users to register, authenticate, send and receive messages in real-time. The application is structured to run both frontend and backend service.
+# Introduction
 
+This project is a real-time chat application implemented using modern web technologies. The application allows users to register, authenticate, send and receive messages in real-time. The application is structured to run both frontend and backend service.
 The project is divided into 2 main parts: the frontend and the backend.
 
-- Frontend: Deals with the Chat Application's interface and makes sure that it connects to the backend to perform different functions such as registering users, logging in, or sending messages.
+## Frontend
+- Directory: 'frontend'
+- Description: The frontend deals with the Chat Application's interface, handling user interactions and displaying messages in real-time, and makes sure that it connects to the backend to perform said functions (registering users, logging in, or sending messages). It is built with React and Vite.
+- The implementations are in the 'frontend\src' directory.
 
-- Backend: Manage APIs and routes and database, and make sure that it can send information to the front end. Web Socket also lies in the backend to perform real-time communication between users.
+## Backend
+- Directory: 'backend'
+- Backend: Manage APIs, routes and database, and make sure that it can send information to the front end. It also handles user authentication and manages chat messages. WebSocket also lies in the backend to perform real-time communication between users. It is built with Node.js and Express, with the help of nodemon to auto refresh server when there are new changes.
+- The implementations are in the 'backend' directory and the index.js file.
 
----Information about the Chat Application:---
+## Socket
+- Directory: 'socket'
+- This directory is used to implement WebSocket (Socket.IO) to handle real-time communication.
+- The implementations are in the index.js file in the 'socket' directory.
+
+
+# Resources Used
+- Frontend:
+  + React
+  + React-bootstrap
+  + Vite
+  + Bootstrap
+  + Socket.io-client
+
+- Backend:
+  + Node.js
+  + Express
+  + MongoDB/Mongoose
+  + Socket.IO
+  + JSON Web Token (JWT) - for authentication
+  + Bcrypt - for hashing passwords
+  + Validator - to make sure emails and passwords are secure and in the correct format.
+
+# Requirements to Setup
+- Node.js installed
+- npm
+- Information on how to set up and run is at the bottom of the README
+
+
+# ---Information about the Chat Application:---
 
 - When running the Chat Application, if you do not have an account, you can register for an account before logging in.
 - When registering, enter your name, email and password.
@@ -14,27 +50,27 @@ The project is divided into 2 main parts: the frontend and the backend.
   - Your password must follow at least: One uppercase, one number, and one symbol.
 - After logging in, the user can then create a chat with another users who already had an account.
 
----
+------------------------------------------------
 
-- The Chat App currently only has:
-
-  - Register Users
-  - Log the Users in
+## The Chat App currently only has (features):
+  - Register Users and Authentication
   - Create new chat with Users who already created an account.
   - Real-time communication
+  - Show which user is online in real-time
   - Load previous chat history from the database
   - Notifications when the user has a new message from another user
 
-- The Chat App currently do not have due to difficulty in learning new information in a short amount of time:
+## The Chat App currently do not have due to difficulty in learning new information in a short amount of time:
   - A search bar or a button to create chat with another Users
   - Creating a Chat Group for multiple users
   - Deleting a chat room
+  - Design of the chat application is not very good due to limited knowledge of CSS
 
-* GitHub repo: https://github.com/TinaMcComiskey/instantmessagingapp
-* Branch: ChatApp
-  ** Ignore the 'main' branch **
+** GitHub repo: https://github.com/TinaMcComiskey/instantmessagingapp **
+** Branch: ChatApp **
+  * Ignore the 'main' branch *
 
----To run the project, do the following:---
+# ---To run the project, do the following:---
 
 'npm install' in the root directory, and in each folder (frontend, backend, and socket) do:
 
@@ -49,5 +85,6 @@ Backend: npm run dev
 Socket: npm run dev
 
 - If you did 'npm install' in the root directory and 'npm install' in all folders, you can also run 'npm run dev' in the root directory to run all 3 folders at once.
+- The project currently runs on http://localhost:5173/ 
 
 - You can do Ctrl+C in the terminal if you want to stop the program.
