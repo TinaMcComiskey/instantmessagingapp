@@ -1,4 +1,4 @@
-'npm install' in the root directory, and possibly in each folders as well
+'npm install' in the root directory, and in each folder as well
 
 Frontend: run 'npm run dev'
 Backend: run 'npm run dev'
