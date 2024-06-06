@@ -74,17 +74,17 @@ The project is divided into 2 main parts: the frontend and the backend.
 
 'npm install' in the root directory, and in each folder (frontend, backend, and socket) do:
 
-Frontend: npm install
-Backend: npm install
-Socket: npm install
+Frontend: npm install    (If you are in root directory, do 'cd frontend' then 'npm install')
+Backend: npm install      (If you are in root directory, do 'cd backend' then 'npm install')
+Socket: npm install      (If you are in root directory, do 'cd socket' then 'npm install')
 
 To run the Chat Application, run the command in each of the folder separately:
 
-Frontend: npm run dev
-Backend: npm run dev
-Socket: npm run dev
+Frontend: npm run dev    (If you are in root directory, do 'cd frontend' then 'npm run dev')
+Backend: npm run dev    (If you are in root directory, do 'cd backend' then 'npm run dev')
+Socket: npm run dev      (If you are in root directory, do 'cd socket' then 'npm run dev')
 
-- If you did 'npm install' in the root directory and 'npm install' in all folders, you can also run 'npm run dev' in the root directory to run all 3 folders at once.
+- If you did 'npm install' in the *root directory* in additional to 'npm install' in all folders, you can also run 'npm run dev' in the root directory to run all 3 folders at once.
 - The project currently runs on http://localhost:5173/ 
 
 - You can do Ctrl+C in the terminal if you want to stop the program.
