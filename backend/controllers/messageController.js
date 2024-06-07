@@ -19,7 +19,7 @@ const createMessage = async (req, res) => {
     res.status(200).json(response);
   } catch (error) {
     console.log(error);
-    res.status(500).json(error);
+    res.status(500).json({ error: "Failed to create message. Please try again later." });
   }
 };
 
