@@ -5,21 +5,24 @@
 const chatModel = require("../models/chatModel");
 
 const createChat = async (req, res) => {
-  const { userIds } = req.body;
+  const { firstId, secondId } = req.body;
+  /*const { userIds } = req.body;
 
   if (!Array.isArray(userIds) || userIds.length < 2) {
     return res.status(400).json({ error: 'userIds must be an array with at least two user IDs' });
-  }
+  }*/
 
   try {
     const chat = await chatModel.findOne({
-      members: { $all: userIds },
+      members: { $all: [firstId, secondId] },
+      //members: { $all: userIds },
     });
 
     if (chat) return res.status(200).json(chat);
 
     const newChat = new chatModel({
-      members: userIds,
+      members: [firstId, secondId],
+      //members: userIds,
     });
 
     const response = await newChat.save();
@@ -36,6 +39,7 @@ const findUserChats = async (req, res) => {
 
   try {
     const chats = await chatModel.find({
+      //members: [firstId, secondId],
       members: { $in: [userId] },
     });
 
