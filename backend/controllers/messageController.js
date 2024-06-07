@@ -2,6 +2,7 @@
 // getMessages
 
 const messageModel = require("../models/messageModel");
+const chatModel = require("../models/chatModel");
 
 // createMessage
 const createMessage = async (req, res) => {
@@ -27,13 +28,30 @@ const createMessage = async (req, res) => {
 const getMessages = async (req, res) => {
   const { chatId } = req.params;
 
-  try{
-    const messages = await messageModel.find({chatId})
+  try {
+    const messages = await messageModel.find({ chatId });
     res.status(200).json(messages);
-  }catch(error){
+  } catch (error) {
     console.log(error);
     res.status(500).json(error);
   }
 };
 
-module.exports = { createMessage, getMessages };
+const deleteChatroom = async (req, res) => {
+  try {
+    const { chatId } = req.params;
+
+    // Remove all messages associated with the chat
+    await messageModel.deleteMany({ chat: chatId });
+
+    // Remove the individual chat
+    await chatModel.findByIdAndRemove(chatId);
+
+    res.status(200).json({ message: "Chat deleted successfully" });
+  } catch (error) {
+    console.log(error);
+    res.status(500).json(error);
+  }
+};
+
+module.exports = { createMessage, getMessages, deleteChatroom };

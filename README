@@ -1,5 +1,4 @@
 # Introduction
-
 This project is a real-time chat application implemented using modern web technologies. The application allows users to register, authenticate, send and receive messages in real-time. The application is structured to run both frontend and backend service.
 The project is divided into 2 main parts: the frontend and the backend.
 

@@ -10,7 +10,7 @@ import moment from "moment";
 
 const UserChat = ({ chat, user }) => {
   const { recipientUser } = useFetchRecipientUser(chat, user);
-  const { onlineUsers, notifications, markThisUserNotificationsAsRead } =
+  const { onlineUsers, notifications, markThisUserNotificationsAsRead, deleteChatroom } =
     useContext(ChatContext);
 
   const { latestMessage } = useFetchLatestMessage(chat);
@@ -72,6 +72,9 @@ const UserChat = ({ chat, user }) => {
             : ""}
         </div>
         <span className={isOnline ? "user-online" : ""}></span>
+      </div>
+      <div>
+        <button className="delete-button" onClick={() => deleteChatroom(chat._id)}>X</button>
       </div>
     </Stack>
   );
