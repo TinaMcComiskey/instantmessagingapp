@@ -31,14 +31,19 @@ The project is divided into 2 main parts: the frontend and the backend.
   + Express
   + MongoDB/Mongoose
   + Socket.IO
+  + Postman
+  + Nodemon
   + JSON Web Token (JWT) - for authentication
   + Bcrypt - for hashing passwords
   + Validator - to make sure emails and passwords are secure and in the correct format.
 
+- Unit Testing:
+  + JEST
+
 # Requirements to Setup
 - Node.js installed
 - npm
-- Information on how to set up and run is at the bottom of the README
+- Information on how to set up and run the program is at the bottom of the README
 
 
 # ---Information about the Chat Application:---
@@ -58,16 +63,27 @@ The project is divided into 2 main parts: the frontend and the backend.
   - Show which user is online in real-time
   - Load previous chat history from the database
   - Notifications when the user has a new message from another user
+  - Deleting a chat room but still keep the chat history
 
 ## The Chat App currently do not have due to difficulty in learning new information in a short amount of time:
   - A search bar or a button to create chat with another Users
-  - Creating a Chat Group for multiple users
-  - Deleting a chat room
+  - Creating a Group Chat for multiple users
   - Design of the chat application is not very good due to limited knowledge of CSS
+  - Deleting chat history after deleting the chat room
+  - Fully implemented unit testings
 
-** GitHub repo: https://github.com/TinaMcComiskey/instantmessagingapp **
-** Branch: ChatApp **
-  * Ignore the 'main' branch *
+## Experiences with the Project:
+- The project was fun and is a great way for us to learn more about how frontend and backend works, as well as collaboration and developing a web application.
+- However, due to our lack of knowledge on the language and many required resources to use on this project (JavaScript, GitHub, MERN), and with our busy schedule from other classes' projects, we did not do very good on this Chat Application project.
+- Learning JavaScript/React/CSS while doing the project is really tough given the short amount of time we have in one term. It would be great if there were more resources and guides on helping implement this project.
+- Nevertheless, it is still a valuable experience as it is our first big project we have ever done.
+
+
+//------------------------------------------------------------------------------
+|  ** GitHub repo: https://github.com/TinaMcComiskey/instantmessagingapp **    |
+|  ** Branch: ChatApp **                                                       |
+|    * Ignore the 'main' branch *                                              |
+//------------------------------------------------------------------------------
 
 # ---To run the project, do the following:---
 
@@ -84,6 +100,14 @@ Backend: npm run dev    (If you are in root directory, do 'cd backend' then 'npm
 Socket: npm run dev      (If you are in root directory, do 'cd socket' then 'npm run dev')
 
 - If you did 'npm install' in the *root directory* in additional to 'npm install' in all folders, you can also run 'npm run dev' in the root directory to run all 3 folders at once.
-- The project currently runs on http://localhost:5173/ 
+- We did not deploy the project, the project currently runs on http://localhost:5173/ 
 
 - You can do Ctrl+C in the terminal if you want to stop the program.
+
+# ---To do the unit testing, do the following:---
+
+'npm install' if you have not done that when you run the project from the instructions above.
+
+- Run 'npm test' in either 'frontend' or 'backend' folders to test.
+    cd frontend or backend
+    npm test

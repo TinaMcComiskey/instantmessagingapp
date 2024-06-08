@@ -64,7 +64,12 @@ const ChatBox = () => {
             >
               <span>{message.text}</span>
               <span className="message-footer">
-                {moment(message.createdAt).calendar()}
+                {`${
+                  message?.senderId === user?._id
+                    ? user.name
+                    : recipientUser?.name
+                }`}{" "}
+                | {moment(message.createdAt).calendar()}
               </span>
             </Stack>
           ))}
