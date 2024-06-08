@@ -1,10 +1,5 @@
 import { createContext, useState, useEffect, useCallback } from "react";
-import {
-  baseUrl,
-  getRequest,
-  postRequest,
-  deleteRequest,
-} from "../utils/services";
+import { baseUrl, getRequest, postRequest } from "../utils/services";
 import { io } from "socket.io-client";
 
 export const ChatContext = createContext();
@@ -184,31 +179,19 @@ export const ChatContextProvider = ({ children, user }) => {
     setCurrentChat(chat);
   }, []);
 
-  const createChat = useCallback(async (firstId, secondId) => {
-    const response = await postRequest(
-      `${baseUrl}/chats`,
-      JSON.stringify({
-        firstId,
-        secondId,
-      })
-    );
+  const createChat = useCallback(async (userIds) => {
+  const response = await postRequest(
+    `${baseUrl}/chats`,
+    JSON.stringify({
+      userIds,  // Send the array of user IDs
+    })
+  );
 
-    if (response.error) {
-      return console.log("Error creating chat", response);
-    }
+  if (response.error) {
+    return console.log("Error creating chat", response);
+  }
 
     setUserChats((prev) => [...prev, response]);
-  }, []);
-
-  const deleteChatroom = useCallback(async (chatId) => {
-    // First, delete the messages associated with the chat room
-
-    // Delete the chat room
-    //await deleteRequest(`${baseUrl}/messages/${currentChat?._id}`)
-    //await deleteRequest(`${baseUrl}/messages/${chatId}`)
-
-    // Update the userChats state to remove the deleted chat room
-    setUserChats((prevChats) => prevChats.filter((chat) => chat._id != chatId));
   }, []);
 
   const markAllNotificationAsRead = useCallback((notifications) => {
@@ -289,7 +272,6 @@ export const ChatContextProvider = ({ children, user }) => {
         markAllNotificationAsRead,
         markNotificationsAsRead,
         markThisUserNotificationsAsRead,
-        deleteChatroom,
       }}
     >
       {children}
