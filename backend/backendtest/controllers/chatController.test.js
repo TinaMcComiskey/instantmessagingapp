@@ -1,7 +1,7 @@
-const chatController = require('../controllers/chatController');
-const chatModel = require('../models/chatModel');
+const chatController = require('../../controllers/chatController');
+const chatModel = require('../../models/chatModel');
 
-jest.mock('../models/chatModel');
+jest.mock('../../models/chatModel');
 
 describe('createChat', () => {
   let req, res;

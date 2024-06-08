@@ -1,5 +1,5 @@
-const messageController = require("../controllers/messageController");
-const messageModel = require("../models/messageModel");
+const messageController = require("../../controllers/messageController");
+const messageModel = require("../../models/messageModel");
 
 describe('createMessage', () => {
     it('should create a new message', async () => {
