@@ -81,8 +81,7 @@ The project is divided into 2 main parts: the frontend and the backend.
 
 //------------------------------------------------------------------------------
 |  ** GitHub repo: https://github.com/TinaMcComiskey/instantmessagingapp **    |
-|  ** Branch: ChatApp **                                                       |
-|    * Ignore the 'main' branch *                                              |
+|  ** Branch: main **                                                          |
 //------------------------------------------------------------------------------
 
 # ---To run the project, do the following:---
