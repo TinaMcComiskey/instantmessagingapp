@@ -82,6 +82,8 @@ The project is divided into 2 main parts: the frontend and the backend.
 //------------------------------------------------------------------------------
 |  ** GitHub repo: https://github.com/TinaMcComiskey/instantmessagingapp **    |
 |  ** Branch: main **                                                          |
+|   - The branch: ChatApp_backup is our attempt at making group chat           |
+|  but was not successful.                                                     |
 //------------------------------------------------------------------------------
 
 # ---To run the project, do the following:---
@@ -104,6 +106,9 @@ Socket: npm run dev      (If you are in root directory, do 'cd socket' then 'npm
 - You can do Ctrl+C in the terminal if you want to stop the program.
 
 # ---To do the unit testing, do the following:---
+
+- Currently, there were not testings done to all the files due to limited time.
+- Some testings in the backend are also not passing at the moment.
 
 'npm install' if you have not done that when you run the project from the instructions above.
 
